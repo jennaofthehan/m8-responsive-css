@@ -1,6 +1,7 @@
 /* Dealing with div whitespace issue:
 see http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-elements-dont-stack */
 
+
 .container {
     font-size: 0;
 }
@@ -12,5 +13,38 @@ see http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-ele
     box-sizing: border-box;
 }
 
+.wrapper{
+	display:inline-block;
+	font-size:2rem;
+	border:2px solid white;
+	background-color: #dad9d9;
+}
+
+#photo{
+	height: 400px;
+	background-color:grey;
+}
+
+#photo p{
+	font-size: 2rem;
+	color:white;
+	text-align: center;
+}
+
 
 /* Assign styles here */
+@media screen and (min-width:768px){
+	.wrapper{
+		width:50%;
+	}
+
+	#photo p{
+		visibility: hidden;
+	}
+
+	#photo{
+		background-image: url("../imgs/peacock.jpeg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
